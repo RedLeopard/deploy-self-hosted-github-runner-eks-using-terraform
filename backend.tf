@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "<UPDATE_HERE>"                       # S3 Bucket name from the CFN stack output
-    key            = "eks_gha_karpenter/terraform.tfstate" # Terraform State file name
-    region         = "<UPDATE_HERE>"                       # AWS Region name where CFN stack resources exist
+    bucket         = "eksghakrpntr-605383993555-us-west-1-terraform-state-bucket"
+    key            = "eks_gha_karpenter/terraform.tfstate"
+    region         = "us-west-1"
     encrypt        = true
-    dynamodb_table = "<UPDATE_HERE>" # DynamoDB table name from the CFN stack output
+    dynamodb_table = "eksghakrpntr-terraform-backend"
   }
 }
